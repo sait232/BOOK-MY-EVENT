@@ -1,0 +1,194 @@
+<!-- login form -->
+<!-- <div class="margin">
+    <div class="hacker">
+    <h1>HackerRank</h1>
+    <p class="backgroundcolor"></p>
+    </div>
+   <h4 class="fordevelopers">For Developers</h4>
+   <p class="practicecoding">practice coding,prepare for interviews,and get hired.</p>
+
+   <form class="border">
+
+    <div class="headers">
+        <h5 class="signup">Sign up</h5>
+        <h5 class="login">Log in</h5>
+    </div>
+
+         <div class="inputleft">
+        <input type="text" placeholder="your username or email"  class="text1" ><br>
+        <input type="text" placeholder="your password" class="text2">
+     </div>
+
+     <div>
+         <div class="checkbox">
+        <input type="checkbox" class="checkbox1">
+        <p class="remember">Remember me</p>
+        <a href="#" class="forgot">Forgot your password?</a>
+    </div>
+     </div>
+
+     <button class="button">Log In</button>
+
+     <div class="bordering">
+         <div class="border1"></div> 
+         <p class="connect">or connect with</p>
+         <p class="border2"></p>
+     </div>
+
+     <div class="images">
+        <img src="./../assets/facebook.png" class="facebook">
+        <img src="./../assets/google.png" class="google">
+        <img src="./../assets/linkedin.png" class="linkedin">
+        <img src="./../assets/cred.png" class="cred">
+     </div>
+
+   </form>
+
+</div> -->
+<!-- end login form -->
+
+
+
+angular logic -->
+<!-- search bar -->
+
+ <div>
+<h1>searching</h1>
+
+ <form [formGroup]="searchBar">
+ 
+    <input type="text" formControlName="Email" name="Email" (keyup)="search()">
+
+   
+</form> 
+
+
+     <input type="text"  name="Email" [(ngModel)]="Email" (keyup)="search()">
+
+   
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>password</th>
+            <th>mobile_number</th>
+            <th>Gender</th>
+            <th>dob</th>
+            <th>Address</th>
+            <th>Created_date</th>
+            <th>Updated_date</th>
+            <th>Login_time</th>
+            <th>Logout_time</th>
+        </tr>
+
+        <tr *ngFor="let x of    arraySearch">
+            <td>{{x.Username}}</td>
+            <td>{{x.Email}}</td>
+            <td>{{x.Password}}</td>
+            <td>{{x.Mobile_number}}</td>
+            <td>{{x.Gender}}</td>
+            <td>{{x.Dob}}</td>
+            <td>{{x.Address}}</td>
+            <td>{{x.Created_date}}</td>
+            <td>{{x.Updated_date}}</td>
+            <td>{{x.Login_time}}</td>
+            <td>{{x.Logout_time}}</td>
+        </tr>
+    </table>
+
+</div>
+
+<!-- search bar -->
+
+<!-- abhi task calculator -->
+<h1>calculator using radio button</h1>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <input type="text" [(ngModel)]="number1">
+            <input type="text" [(ngModel)]="number2">
+
+            <button type="submit" class="btn btn-primary" (click)="total1()">calculator</button>
+            <p>{{number3}}</p>
+           
+        </div>
+
+        <div class="col-sm-6" >
+           
+
+           <div [(ngModel)]="number4"  value="+"> addition
+            <input type="radio" > 
+        </div>
+
+        <div [(ngModel)]="number5" value="-" > substraction
+            <input type="radio"  >
+        </div>
+
+        <div [(ngModel)]="number6" value="*">multiplication
+            <input type="radio">
+        </div>
+
+        <div  [(ngModel)]="number7" value="/">division
+            <input type="radio">
+        </div> 
+
+
+
+    </div>
+
+    
+</div>
+
+
+<!-- book my event -->
+
+<div>
+
+    <div>
+<app-header></app-header>
+    </div>
+
+<div>
+    <div> 
+        <!-- <app-admin-home></app-admin-home> -->
+    </div>
+
+     <div>
+<router-outlet></router-outlet>
+    </div>
+    
+    </div>
+</div> 
+
+
+<!-- bootstrap responsive-form --start -->
+<div class="container">
+<div class="row">
+<div class="col-md">
+    <div class="custom-login">
+        <h1>Login Form</h1>
+    </div>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text"  id="firstName" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="lastName">First Name</label>
+        <input type="text"  id="lastName" class="form-control">
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<!-- bootstrap responsive-form --end -->
+
+
+
