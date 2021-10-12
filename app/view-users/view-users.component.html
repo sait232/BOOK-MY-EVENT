@@ -1,0 +1,40 @@
+<p>view-users works!</p>
+<!-- {{viewUsers| json}} -->
+<div >
+    <h1 class="users">USERS</h1>
+    <table class="table table-striped table-bordered ">
+
+        <tr>
+            <th>user_id</th>
+            <th>username</th>
+            <th>email</th>
+            <th>password</th>
+            <th>mobile_number</th>
+            <th>gender</th>
+            <th>dob</th>
+            <th>address</th>
+            <th>created_date</th>
+            <th>updated_date</th>
+            <th>login_time</th>
+            <th>logout_time</th>
+        </tr>
+
+        <tr *ngFor="let x of viewUsers let i=index">
+            <td>{{i+1}}</td>
+            <td>{{x.Username}}</td>
+            <td>{{x.Email}}</td>
+            <td>{{x.Password}}</td>
+            <td>{{x.Mobile_Number}}</td>
+            <td>{{x.Gender}}</td>
+            <td>{{x.Dob}}</td>
+            <td>{{x.Address}}</td>
+            <td>{{x.Created_date}}</td>
+            <td>{{x.Updated_date}}</td>
+            <td>{{x.Login_time}}</td>
+            <td>{{x.Logout_time}}</td>
+        </tr>
+
+
+
+    </table>
+</div>
