@@ -1,0 +1,34 @@
+<p>admin-profile works!</p>
+
+<div>
+    
+    <table class="table  table-striped table-bordered ">
+         
+        <tr>
+            <th>admin_id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>password</th>
+            <th>mobile_number</th>
+            <th>login_time</th>
+            <th>logout_time</th>
+        </tr>
+  
+        <tr *ngFor="let x of adminArray let i=index">
+            <td>{{i+5}}</td>
+           <td>{{x.Email}}</td>
+            <td>{{x.Password}}</td>
+                <td><input type="text" value="{{x.Name}}"  [readonly]="isActive" name="Name" formControlName="Name"></td>
+                    <td> <input type="text" value="{{x.Mobile_number}}"  [readonly]="isActive" name="Mobile_number" formControlName="Mobile_number"></td>
+            <td>{{x.Login_time}}</td>
+            <td>{{x.Logout_time}}</td>
+        </tr>
+
+        <button type="submit" (click)="edit()" class="btn btn-primary">Edit</button>
+        <!-- <button type="submit" (click)="save()" class="btn btn-success">Save</button> -->
+        
+    </table>
+
+
+
+</div>
